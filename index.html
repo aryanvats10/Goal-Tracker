@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goal Tracker UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="screens">
+      <section class="phone">
+        <header class="status-bar">
+          <span>9:30 PM</span>
+          <span>◔ 𝌆 ▰</span>
+        </header>
+
+        <div class="screen-content">
+          <button class="icon-btn top-icon">◎</button>
+          <h1>Create Goal Plan</h1>
+
+          <div class="progress-ring" data-percent="68">
+            <svg viewBox="0 0 200 200">
+              <defs>
+                <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#55d6ff" />
+                  <stop offset="100%" stop-color="#8f7dff" />
+                </linearGradient>
+              </defs>
+              <circle class="track" cx="100" cy="100" r="76"></circle>
+              <circle class="fill" cx="100" cy="100" r="76"></circle>
+            </svg>
+            <div class="ring-label">
+              <strong>68%</strong>
+              <span>Weekly Goal</span>
+            </div>
+          </div>
+
+          <div class="stacked-actions">
+            <button class="pill pill-primary">⚙ Setup Goal</button>
+            <button class="pill">🏁 Begin Session</button>
+            <button class="pill">📈 View Insights</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="phone">
+        <header class="status-bar">
+          <span>9:30 PM</span>
+          <span>◔ 𝌆 ▰</span>
+        </header>
+
+        <div class="screen-content">
+          <div class="profile-row">
+            <div class="avatar-wrap">
+              <div class="avatar">A</div>
+              <div>
+                <small>Alex Cole</small>
+                <h2>Today's Goals</h2>
+              </div>
+            </div>
+            <button class="icon-btn">＋</button>
+          </div>
+
+          <article class="card scheduler">
+            <div class="card-title-row">
+              <h3>March 2025</h3>
+              <div class="inline-btns">
+                <button class="icon-btn small">‹</button>
+                <button class="icon-btn small">›</button>
+              </div>
+            </div>
+            <div class="day-grid">
+              <button class="day">Sun<br /><span>2</span></button>
+              <button class="day active">Mon<br /><span>3</span></button>
+              <button class="day">Tue<br /><span>4</span></button>
+              <button class="day">Wed<br /><span>5</span></button>
+              <button class="day">Thu<br /><span>6</span></button>
+            </div>
+            <div class="session-pills">
+              <button class="pill tiny active-tab">Morning</button>
+              <button class="pill tiny">Afternoon</button>
+              <button class="pill tiny">Evening</button>
+            </div>
+          </article>
+
+          <article class="quick-metrics">
+            <div>
+              <small>Current Streak</small>
+              <strong>14 days 🔥</strong>
+            </div>
+            <div>
+              <small>Done Today</small>
+              <strong>4 / 6</strong>
+            </div>
+          </article>
+
+          <section class="habit-area">
+            <div class="section-head">
+              <h3>Focus Goal</h3>
+              <a href="#">See All</a>
+            </div>
+            <article class="hero-card">
+              <div>
+                <h4>Deep work sprint</h4>
+                <p>Two 45-minute focus blocks with distraction timer.</p>
+                <button class="icon-btn launch">↗</button>
+              </div>
+              <div class="hero-visual"></div>
+            </article>
+          </section>
+
+          <nav class="bottom-nav">
+            <button class="active-tab">Today</button>
+            <button>Goals</button>
+            <button>Progress</button>
+            <button>Profile</button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="phone">
+        <header class="status-bar">
+          <span>9:30 PM</span>
+          <span>◔ 𝌆 ▰</span>
+        </header>
+
+        <div class="screen-content">
+          <div class="section-head no-space">
+            <h2>History</h2>
+            <button class="icon-btn">⤴</button>
+          </div>
+
+          <div class="health-cards">
+            <article class="card compact">
+              <small>Hydration</small>
+              <h4>2.1 / 3.0 L</h4>
+              <div class="meter"><span style="width: 70%"></span></div>
+            </article>
+            <article class="card compact">
+              <small>Sleep</small>
+              <h4>7h 20m</h4>
+              <div class="meter"><span style="width: 82%"></span></div>
+            </article>
+          </div>
+
+          <div class="segmented">
+            <button class="active-tab">Calendar</button>
+            <button>All goals</button>
+            <button>Rewards</button>
+          </div>
+
+          <article class="card month-card">
+            <div class="card-title-row">
+              <h3>March 2025</h3>
+              <div class="inline-btns">
+                <button class="icon-btn small">‹</button>
+                <button class="icon-btn small">›</button>
+              </div>
+            </div>
+            <div class="weekday-row">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span
+              ><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </article>
+
+          <article class="card consistency-card">
+            <div class="card-title-row">
+              <h3>Weekly consistency</h3>
+              <strong>76%</strong>
+            </div>
+            <div class="bars">
+              <span style="height: 35%"></span><span style="height: 72%"></span
+              ><span style="height: 45%"></span><span style="height: 80%"></span
+              ><span style="height: 64%"></span><span style="height: 90%"></span
+              ><span style="height: 58%"></span>
+            </div>
+          </article>
+
+          <nav class="bottom-nav">
+            <button>Today</button>
+            <button>Goals</button>
+            <button class="active-tab">History</button>
+            <button>Profile</button>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
