@@ -1,0 +1,17 @@
+{
+  "name": "goal-tracker",
+  "version": "1.0.0",
+  "description": "Customizable goal tracking web app",
+  "main": "app.js",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "test": "echo \"No test suite is configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://localhost:26831/aryanvats10/Goal-Tracker"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
