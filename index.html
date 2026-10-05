@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goal Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Goal Tracker</h1>
+      <p>Track your goals with personalized categories, styles, and workflow preferences.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Create Goal</h2>
+      <form id="goal-form">
+        <div class="grid">
+          <label>Title
+            <input id="goal-title" required maxlength="80" placeholder="Run 5km 3x/week" />
+          </label>
+          <label>Category
+            <div class="inline-field">
+              <select id="goal-category"></select>
+              <input id="new-category" maxlength="30" placeholder="New category" />
+              <button type="button" id="add-category">Add</button>
+            </div>
+          </label>
+          <label>Priority
+            <select id="goal-priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+          <label>Due Date
+            <input id="goal-due-date" type="date" />
+          </label>
+          <label class="full">Details
+            <textarea id="goal-details" rows="2" maxlength="300" placeholder="Optional details"></textarea>
+          </label>
+        </div>
+        <button type="submit">Add Goal</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Customize Experience</h2>
+      <div class="grid">
+        <label>Theme
+          <select id="theme-mode">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </label>
+        <label>Accent Color
+          <input id="accent-color" type="color" value="#2563eb" />
+        </label>
+        <label>Card Density
+          <select id="density">
+            <option value="normal">Normal</option>
+            <option value="compact">Compact</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Filter & Sort</h2>
+      <div class="grid">
+        <label>Status
+          <select id="filter-status">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+          </select>
+        </label>
+        <label>Category
+          <select id="filter-category">
+            <option value="all">All</option>
+          </select>
+        </label>
+        <label>Priority
+          <select id="filter-priority">
+            <option value="all">All</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+        <label>Sort By
+          <select id="sort-goals">
+            <option value="created-desc">Newest</option>
+            <option value="created-asc">Oldest</option>
+            <option value="due-asc">Due Soon</option>
+            <option value="priority-desc">High Priority</option>
+            <option value="title-asc">Title (A-Z)</option>
+          </select>
+        </label>
+        <label class="full">Search
+          <input id="search-goals" placeholder="Search goals and details" />
+        </label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Your Goals</h2>
+      <div id="goal-list" class="goal-list"></div>
+      <p id="empty-state" class="empty-state">No goals yet. Add one to get started.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
